@@ -189,10 +189,8 @@
     }
 
     &__website {
-        flex: 1;
         min-width: 0;
         padding-right: 5px;
-        max-width: 230px;
 
         &-ins {
             overflow: hidden;
@@ -335,11 +333,18 @@
     }
 }
 
-@media (min-width: 992px) {
-
+@media (min-width: 768px) {
+    .company-info {
+        &__hint {
+            &-dropdown {
+                margin-left: -100px;
+                left: 50%;
+            }
+        }
+    }
 }
 
-@media (min-width: 667px) {
+@media (max-width: 767px) {
 
 }
 

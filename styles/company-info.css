@@ -173,12 +173,8 @@
       flex-wrap: wrap;
 }
 .company-info__website {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   min-width: 0;
   padding-right: 5px;
-  max-width: 230px;
 }
 .company-info__website-ins {
   overflow: hidden;
@@ -307,6 +303,12 @@
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  .company-info__hint-dropdown {
+    margin-left: -100px;
+    left: 50%;
+  }
+}
 @media (max-width: 376px) {
   .company-info__box {
     -ms-flex-wrap: wrap;
