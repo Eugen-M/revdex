@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .company-info {
   background-color: #fff;
   border: 1px solid #d6d6d6;
@@ -79,7 +78,8 @@
 }
 .company-info__rate {
   display: none;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  max-width: 400px;
 }
 .company-info__rate-row {
   display: -webkit-box;
@@ -96,11 +96,17 @@
 .company-info__rate-num {
   width: 76px;
   padding-right: 5px;
+  -ms-flex: 0 0 20%;
+  -webkit-box-flex: 0;
+          flex: 0 0 20%;
+  max-width: 20%;
+  white-space: nowrap;
 }
 .company-info__rate-line {
   border: 1px solid #9f9f9f;
   border-radius: 2px;
   width: 100%;
+  height: 20px;
 }
 .company-info__rate-line-ins {
   height: 20px;
@@ -122,6 +128,10 @@
 }
 .company-info__rate-quan {
   padding-left: 5px;
+  -ms-flex: 0 0 20%;
+  -webkit-box-flex: 0;
+          flex: 0 0 20%;
+  max-width: 20%;
 }
 .company-info__rate-link {
   text-decoration: none;
@@ -135,21 +145,6 @@
   margin-bottom: 20px;
 }
 .company-info__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   margin-bottom: 20px;
 }
 .company-info__box-title {
@@ -157,7 +152,7 @@
   padding-right: 5px;
 }
 .company-info__box-descr {
-  max-width: 90%;
+  padding-left: 30px;
 }
 .company-info__row {
   display: -webkit-box;
@@ -183,6 +178,7 @@
           flex: 1;
   min-width: 0;
   padding-right: 5px;
+  max-width: 230px;
 }
 .company-info__website-ins {
   overflow: hidden;
@@ -230,6 +226,8 @@
 }
 .company-info__hint {
   position: relative;
+  margin-right: auto;
+  float: left;
 }
 .company-info__hint-btn {
   width: 12px;
@@ -258,13 +256,11 @@
   display: block;
 }
 .company-info__hint-title {
-  font-family: Roboto,Arial,sans-serif;
   font-weight: 700;
   margin-bottom: 20px;
 }
 .company-info__hint-text {
   font-size: 14px;
-  font-family: Roboto,Arial,sans-serif;
 }
 .company-info__social {
   display: -webkit-box;
@@ -309,4 +305,17 @@
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   text-decoration: none;
+}
+
+@media (max-width: 376px) {
+  .company-info__box {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .company-info__box-title, .company-info__box-descr {
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
